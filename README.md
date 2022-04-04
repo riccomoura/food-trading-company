@@ -14,3 +14,7 @@ Processo de Data Integration e orquestração de pipelines que automatizam proce
 ## Exibição da tabela Fatos
 
 ![alt text](https://i.imgur.com/Fstlk4G.png)
+
+## Orquestação realizada no Azure Data Factory
+
+![alt text](https://i.imgur.com/NTc4B5v.png)
