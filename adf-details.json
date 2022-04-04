@@ -1,5 +1,5 @@
 {
-    "name": "pocco_1",
+    "name": "company_name",
     "properties": {
         "activities": [
             {
@@ -78,7 +78,7 @@
             }
         ],
         "folder": {
-            "name": "henrique_mesquita/Lab 03"
+            "name": "henrique_mesquita/food_trading_company"
         },
         "annotations": [],
         "lastPublishTime": "2022-01-05T17:44:12Z"
