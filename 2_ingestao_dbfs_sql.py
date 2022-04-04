@@ -25,11 +25,11 @@ df = spark.read \
 # COMMAND ----------
 
 table_name = "STAGE_henrique_mesquita.orders"
-jdbcServer = "sql-estudo.database.windows.net"
-jdbcDatabase = "db-estudos"
+jdbcServer = "sql-user.database.windows.net"
+jdbcDatabase = "db-user"
 jdbcPort = 1433
-jdbcUsername = "admin-azure"
-jdbcPassword = "a&Ehs&HB"
+jdbcUsername = "{username}"
+jdbcPassword = "{password}"
 jdbcUrl = f"jdbc:sqlserver://{jdbcServer}:{jdbcPort};database={jdbcDatabase};user={jdbcUsername};password={jdbcPassword}"
 
 df.write \
