@@ -1,0 +1,87 @@
+{
+    "name": "pocco_1",
+    "properties": {
+        "activities": [
+            {
+                "name": "mount_Blob_para_DBFS",
+                "type": "DatabricksNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "{CONFIDENTIAL}"
+                },
+                "linkedServiceName": {
+                    "referenceName": "company_henrique",
+                    "type": "LinkedServiceReference"
+                }
+            },
+            {
+                "name": "DBFS_para_SQL_Server",
+                "type": "DatabricksNotebook",
+                "dependsOn": [
+                    {
+                        "activity": "mount_Blob_para_DBFS",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebookPath": "{CONFIDENTIAL}"
+                },
+                "linkedServiceName": {
+                    "referenceName": "company_henrique",
+                    "type": "LinkedServiceReference"
+                }
+            },
+            {
+                "name": "converter_tipos_performar_tabelas",
+                "type": "SqlServerStoredProcedure",
+                "dependsOn": [
+                    {
+                        "activity": "DBFS_para_SQL_Server",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "storedProcedureName": "[DW_henrique_mesquita].[PerformedTables]"
+                },
+                "linkedServiceName": {
+                    "referenceName": "conn_henrique_azure_sql",
+                    "type": "LinkedServiceReference"
+                }
+            }
+        ],
+        "folder": {
+            "name": "henrique_mesquita/Lab 03"
+        },
+        "annotations": [],
+        "lastPublishTime": "2022-01-05T17:44:12Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}
