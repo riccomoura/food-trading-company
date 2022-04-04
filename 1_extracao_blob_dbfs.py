@@ -5,10 +5,10 @@
 # COMMAND ----------
 
 # Lançamento de credenciais
-_conf_key = "fs.azure.account.key.stgestudos.blob.core.windows.net"
-_key = "j+Ji7MO3YLhkwCarp8OCzbgy2ENitNs09cF8Sm2q2IU1UZGo82VKSmuVXidZeUEn4/ljKtItIB1ZW6JVd1YAuQ=="
+_conf_key = "fs.azure.account.key.user.blob.core.windows.net"
+_key = "{key}"
 _chave = {_conf_key:_key}
-_url_blob = "wasbs://pocco-company@stgestudos.blob.core.windows.net"
+_url_blob = "wasbs://fake-company@user.blob.core.windows.net"
 path = "/mnt/henrique_mesquita"
 
 # Prevenindo erros de execução futuros
