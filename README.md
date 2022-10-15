@@ -7,9 +7,13 @@ Processo de Data Integration e orquestração de pipelines que automatizam proce
 
 ![alt text](https://i.imgur.com/RWBwj2W.png)
 
-## Procedure para criação e população do star schema
+## Criação das tabelas Fatos e Dimensões - star schema
 
 ![alt text](https://i.imgur.com/moOgP10.png)
+
+## Criação da procedure
+
+![alt text](https://i.imgur.com/JwXmLGG.png)
 
 ## Exibição da tabela Fatos
 
