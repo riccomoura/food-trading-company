@@ -3,13 +3,13 @@ Processo de Data Integration e orquestração de pipelines que automatizam proce
 
 ### Foi utilizado star schema (Tabelas Fatos e Dimensões) e Data Warehousing integrado do Power BI.
 
-## Visualização das tabelas
-
-![alt text](https://i.imgur.com/RWBwj2W.png)
-
 ## Criação das tabelas Fatos e Dimensões - star schema
 
 ![alt text](https://i.imgur.com/81f0dvj.png)
+
+## Visualização das tabelas
+
+![alt text](https://i.imgur.com/RWBwj2W.png)
 
 ## Execução de teste
 
